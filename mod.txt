@@ -1,0 +1,16 @@
+{
+	"name": "String ID Dumper",
+	"description": "Dump all string and text after it being loaded",
+	"author": "CENSOR_1337, shinrax2",
+	"version": "1",
+	"blt_version" : 2.0,
+	"priority" : -1,
+	"color" : "1 1 1",
+	"contact": "CENSOR_1337#3992",
+	"hooks": [
+		{
+			"hook_id" : "lib/managers/localizationmanager",
+			"script_path" : "localizationmanager.lua"
+		}
+	]
+}
