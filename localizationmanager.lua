@@ -17,8 +17,8 @@ function LocalizationManager:text(string_id, ...)
         if not (data[string_id]) then
             local str = text_original(self, string_id, ...)
             if not str:match("ERROR") then
-                data[string_id] = str
-                if (data) then
+                if (data) and string.len(str) > 0 then
+					data[string_id] = str
                     local file = io.open(destination_path .. "data_string_ID.json", "w")
                     if file then
                         file:write(json.encode(data))
