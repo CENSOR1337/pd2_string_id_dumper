@@ -43,7 +43,7 @@ function LocalizationManager:text(string_id, ...)
             end
             -- Dump Hashlist
             if (DumpHashlist) then
-                local file = io.open(destination_path .. "/raw/" .. "hashlist", "r+")
+                local file = io.open(destination_path .. "/raw/" .. "hashlist", "a+")
                 if file then
                     local contents = file:read("*all")
                     if not (contents:find(string_id)) then
